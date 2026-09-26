@@ -8,36 +8,6 @@ O guia utiliza o SmolLM2 1.7B Instruct Q4_K_M como exemplo, mas outros modelos c
 
 ---
 
-# Sobre o projeto
-
-A arquitetura utilizada é simples:
-```
-┌─────────────────────────────┐
-│          Android            │
-│                             │
-│  ┌───────────────────────┐  │
-│  │       Termux          │  │
-│  │                       │  │
-│  │  ┌─────────────────┐  │  │
-│  │  │    llama.cpp    │  │  │
-│  │  │                 │  │  │
-│  │  │  llama-server   │  │  │
-│  │  └────────┬────────┘  │  │
-│  │           │           │  │
-│  │  ┌────────▼────────┐  │  │
-│  │  │    GGUF Model   │  │  │
-│  │  │   SmolLM2 1.7B  │  │  │
-│  │  └─────────────────┘  │  │
-│  └───────────────────────┘  │
-└──────────────┬──────────────┘
-               │
-               ▼
-      http://192.x.x.1:8080
-```
-O "llama.cpp" funciona como o motor de inferência, enquanto o "llama-server" disponibiliza uma interface web local.
-
----
-
 # Recursos
 
 - Execução de IA local
